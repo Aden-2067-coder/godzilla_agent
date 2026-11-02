@@ -1,0 +1,18 @@
+blocks.onBlockBroken(BLOCK_OF_NETHERITE, function () {
+    agent.collectAll()
+})
+player.onChat("\"hello. im your Agent\"", function () {
+    player.tell(mobs.target(NEAREST_PLAYER), "Hi!")
+})
+mobs.spawn(AGENT, pos(200, 64, 64))
+gameplay.setDifficulty(NORMAL)
+agent.setSlot(1)
+agent.teleportToPlayer()
+agent.move(FORWARD, 2)
+agent.move(BACK, 2)
+agent.move(LEFT, 2)
+agent.move(RIGHT, 2)
+agent.destroy(FORWARD)
+agent.attack(FORWARD)
+agent.collect(DIAMOND)
+agent .detect(END_PORTAL)
